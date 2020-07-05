@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Movie Review Sentiment Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='imdb-favicon.png') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'>Sentiment and Rating Predictor for </span><span class="heading_second">Movie Reviews</span></h2>
+            <div class='description'>
+    			<p>A Deep Learning Web App, built with Flask, deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+            <!-- Prediction Form -->
+            <div class='div2'>
+                <form action="{{ url_for('predict') }}" method="POST">
+                    <br><input class="form-input align-center" type="text" id="review" name="review" placeholder="Your review here"><br>
+            
+			<input type="submit" class="myButton" value="Get Predictions">
+        	</form>
+            </div>
+
+            
+        </div>
+
+        <!-- Footer -->
+       <div class="footer">
+           <div class="contact">
+               <a target="_blank" href="https://github.com/vatsalya-gupta/Sentiment-Analysis-Movie-Reviews"><i class="fab fa-github fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by Vatsalya Gupta.</p>
+       </div>
+
+    </body>
+</html>
